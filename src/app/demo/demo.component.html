@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <hr>
+            <form class="">
+                <div class="form-group">
+                    <label for="uname">Username : </label>
+                    <input type="text" class="form-control" #uname name="uname">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password : </label>
+                    <input type="password" class="form-control" #pwd name="pwd" [(ngModel)]="password">
+                    <p>{{ password }}</p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email : </label>
+                    <input type="email" class="form-control" #email name="email">
+                </div>
+                <button class="btn btn-success"
+                    (click)="formSubmit(uname.value,pwd.value,email.value)">Submit</button>&nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn btn-primary">Clear</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-danger">Cancel</button>
+            </form>
+
+            <hr>
+            <button class="btn btn-primary" (dblclick)="displayBtn()">{{ btnName }}</button>
+            &nbsp;&nbsp;&nbsp;<button class="btn btn-primary" [hidden]="!btnStatus">Demo Button</button>
+            <br>
+            <br>
+            <input type="text" class="col-md-4 form-control" id="txt1" name="txt1" [(ngModel)]="text">
+            <br>
+            <button class="btn btn-danger">{{ text }}</button>
+
+            <!-- &nbsp;&nbsp;&nbsp;<img [src]="imgpath" alt="img not found"> -->
+            <hr>
+        </div>
+    </div>
+</div>
