@@ -34,5 +34,18 @@
             <!-- &nbsp;&nbsp;&nbsp;<img [src]="imgpath" alt="img not found"> -->
             <hr>
         </div>
+        <div class="col-md-6">
+            <br>
+            <br>
+            <button class="btn btn-primary" (click)="addBtn()">Add New Button</button>&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="deleteBtn()" [disabled]="btnDisabled">Delete Button</button><br><br>
+            <div *ngFor="let button of buttons">
+                <button class="btn btn-primary">{{ button }}</button><br><br>
+            </div>
+            <div *ngIf="i<2">
+                <p>Button Not Exists...Cannot be Deleted</p>
+            </div>
+            <p *ngFor="let s of sample">{{ s | json }}</p>
+        </div>
     </div>
 </div>
